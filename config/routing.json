@@ -1,0 +1,16 @@
+{
+  "default": {
+    "provider": "anthropic_messages",
+    "model_env": "DEFAULT_MODEL"
+  },
+  "role_overrides": {
+    "flirt": {
+      "provider": "xai_chat_completions",
+      "model_env": "GROK_MODEL"
+    },
+    "hot_mess": {
+      "provider": "xai_chat_completions",
+      "model_env": "GROK_MODEL"
+    }
+  }
+}

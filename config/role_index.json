@@ -1,0 +1,102 @@
+[
+  {
+    "role_id": "flirt",
+    "role_name": "Flirt",
+    "description": "Flirty, confident conversation when you want sparks, boldness, and a little trouble."
+  },
+  {
+    "role_id": "good_company",
+    "role_name": "Good Company",
+    "description": "Someone to talk to when you don\u2019t want fixing, judging, or advice\u2014just company."
+  },
+  {
+    "role_id": "motivator",
+    "role_name": "Motivator",
+    "description": "A push forward when you\u2019re stuck, hesitating, or about to talk yourself out of it."
+  },
+  {
+    "role_id": "love_life",
+    "role_name": "Love & Life",
+    "description": "Unfiltered perspective on relationships, people, and the strange choices we all make."
+  },
+  {
+    "role_id": "tech_help",
+    "role_name": "Tech Help",
+    "description": "Calm, practical help for everyday tech problems and \u201cwhy isn\u2019t this working?\u201d moments."
+  },
+  {
+    "role_id": "sports",
+    "role_name": "Sports",
+    "description": "Remembers the play. Questions the call. Knows exactly why your team lost\u2014and who to blame."
+  },
+  {
+    "role_id": "music",
+    "role_name": "Music",
+    "description": "Music talk that drifts into memories, moods, and why certain songs still hit."
+  },
+  {
+    "role_id": "troublemaker",
+    "role_name": "Troublemaker",
+    "description": "Provokes, pokes, and challenges your assumptions just to see what happens."
+  },
+  {
+    "role_id": "hot_topics",
+    "role_name": "Hot Topics",
+    "description": "What\u2019s happening, why it matters, and what everyone else is missing."
+  },
+  {
+    "role_id": "travel",
+    "role_name": "Travel",
+    "description": "Talking about getting out\u2014where you\u2019d go, why you\u2019d go, and whether it\u2019s still worth it."
+  },
+  {
+    "role_id": "money_talk",
+    "role_name": "Money Talk",
+    "description": "Straightforward conversations about money, tradeoffs, mistakes, and peace of mind."
+  },
+  {
+    "role_id": "home_repairs",
+    "role_name": "Home Repairs",
+    "description": "Talking through fixes, projects, and practical \u201chow bad could this be?\u201d decisions."
+  },
+  {
+    "role_id": "movies",
+    "role_name": "Movies",
+    "description": "Movies without reverence\u2014what held up, what didn\u2019t, and what still haunts you."
+  },
+  {
+    "role_id": "tech_talk",
+    "role_name": "Tech Talk",
+    "description": "New gadgets, clever uses, side projects, and what\u2019s actually fun to mess with right now."
+  },
+  {
+    "role_id": "hot_mess",
+    "role_name": "Hot Mess",
+    "description": "When everything\u2019s slightly on fire\u2026 and you\u2019re calling it \u201ca phase.\u201d"
+  },
+  {
+    "role_id": "language_guide",
+    "role_name": "Language Guide",
+    "description": "Talk your way into a new language. Mistakes included. Confidence optional at first."
+  },
+  {
+    "role_id": "vibe_code_guide",
+    "role_name": "Vibe Code Guide",
+    "description": "Helps you say it again, but this time so the agent gets it."
+  },
+  {
+    "role_id": "writing_guide",
+    "role_name": "Writing Guide",
+    "description": "For when the idea is clear but the words refuse to cooperate."
+  },
+  {
+    "role_id": "public_speaking_guide",
+    "role_name": "Public Speaking Guide",
+    "description": "Practice saying it out loud until it sounds like you know what you\u2019re doing."
+  },
+  {
+    "role_id": "career_guide",
+    "role_name": "Career Guide",
+    "description": "Because you want a job\u2014not a panic attack."
+  }
+]

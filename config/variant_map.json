@@ -1,0 +1,684 @@
+{
+  "contacts": [
+    {
+      "persona_id": "flirt_male",
+      "role_id": "flirt",
+      "variant": "male",
+      "display_name": "Flirt",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "flirt_female",
+      "role_id": "flirt",
+      "variant": "female",
+      "display_name": "Flirt",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "good_company_male",
+      "role_id": "good_company",
+      "variant": "male",
+      "display_name": "Good Company",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "good_company_female",
+      "role_id": "good_company",
+      "variant": "female",
+      "display_name": "Good Company",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "motivator_male",
+      "role_id": "motivator",
+      "variant": "male",
+      "display_name": "Motivator",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "motivator_female",
+      "role_id": "motivator",
+      "variant": "female",
+      "display_name": "Motivator",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "love_life_male",
+      "role_id": "love_life",
+      "variant": "male",
+      "display_name": "Love & Life",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "love_life_female",
+      "role_id": "love_life",
+      "variant": "female",
+      "display_name": "Love & Life",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "tech_help_male",
+      "role_id": "tech_help",
+      "variant": "male",
+      "display_name": "Tech Help",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "tech_help_female",
+      "role_id": "tech_help",
+      "variant": "female",
+      "display_name": "Tech Help",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "sports_male",
+      "role_id": "sports",
+      "variant": "male",
+      "display_name": "Sports",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "sports_female",
+      "role_id": "sports",
+      "variant": "female",
+      "display_name": "Sports",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "music_male",
+      "role_id": "music",
+      "variant": "male",
+      "display_name": "Music",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "music_female",
+      "role_id": "music",
+      "variant": "female",
+      "display_name": "Music",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "troublemaker_male",
+      "role_id": "troublemaker",
+      "variant": "male",
+      "display_name": "Troublemaker",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "troublemaker_female",
+      "role_id": "troublemaker",
+      "variant": "female",
+      "display_name": "Troublemaker",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "hot_topics_male",
+      "role_id": "hot_topics",
+      "variant": "male",
+      "display_name": "Hot Topics",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "hot_topics_female",
+      "role_id": "hot_topics",
+      "variant": "female",
+      "display_name": "Hot Topics",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "travel_male",
+      "role_id": "travel",
+      "variant": "male",
+      "display_name": "Travel",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "travel_female",
+      "role_id": "travel",
+      "variant": "female",
+      "display_name": "Travel",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "money_talk_male",
+      "role_id": "money_talk",
+      "variant": "male",
+      "display_name": "Money Talk",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "money_talk_female",
+      "role_id": "money_talk",
+      "variant": "female",
+      "display_name": "Money Talk",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "home_repairs_male",
+      "role_id": "home_repairs",
+      "variant": "male",
+      "display_name": "Home Repairs",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "home_repairs_female",
+      "role_id": "home_repairs",
+      "variant": "female",
+      "display_name": "Home Repairs",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "movies_male",
+      "role_id": "movies",
+      "variant": "male",
+      "display_name": "Movies",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "movies_female",
+      "role_id": "movies",
+      "variant": "female",
+      "display_name": "Movies",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "tech_talk_male",
+      "role_id": "tech_talk",
+      "variant": "male",
+      "display_name": "Tech Talk",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "tech_talk_female",
+      "role_id": "tech_talk",
+      "variant": "female",
+      "display_name": "Tech Talk",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "hot_mess_male",
+      "role_id": "hot_mess",
+      "variant": "male",
+      "display_name": "Hot Mess",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "hot_mess_female",
+      "role_id": "hot_mess",
+      "variant": "female",
+      "display_name": "Hot Mess",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "language_guide_male",
+      "role_id": "language_guide",
+      "variant": "male",
+      "display_name": "Language Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "language_guide_female",
+      "role_id": "language_guide",
+      "variant": "female",
+      "display_name": "Language Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "vibe_code_guide_male",
+      "role_id": "vibe_code_guide",
+      "variant": "male",
+      "display_name": "Vibe Code Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "vibe_code_guide_female",
+      "role_id": "vibe_code_guide",
+      "variant": "female",
+      "display_name": "Vibe Code Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "writing_guide_male",
+      "role_id": "writing_guide",
+      "variant": "male",
+      "display_name": "Writing Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "writing_guide_female",
+      "role_id": "writing_guide",
+      "variant": "female",
+      "display_name": "Writing Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "public_speaking_guide_male",
+      "role_id": "public_speaking_guide",
+      "variant": "male",
+      "display_name": "Public Speaking Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "public_speaking_guide_female",
+      "role_id": "public_speaking_guide",
+      "variant": "female",
+      "display_name": "Public Speaking Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    },
+    {
+      "persona_id": "career_guide_male",
+      "role_id": "career_guide",
+      "variant": "male",
+      "display_name": "Career Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_MALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_male.mp3"
+      }
+    },
+    {
+      "persona_id": "career_guide_female",
+      "role_id": "career_guide",
+      "variant": "female",
+      "display_name": "Career Guide",
+      "type": "regular",
+      "voice": {
+        "voice_id": "VOICE_FEMALE_DEFAULT",
+        "style": {
+          "pacing": "normal",
+          "warmth": "medium",
+          "energy": "medium",
+          "texture": "natural"
+        },
+        "preview_voice_url": "https://example.com/preview_female.mp3"
+      }
+    }
+  ]
+}

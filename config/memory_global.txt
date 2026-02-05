@@ -1,0 +1,5 @@
+Global Memory Rules (v2 placeholder)
+Allowed memory types (high-level only): preferences, inventory, threads, anchors.
+Never store: full name, address, phone, email, government IDs, account numbers, precise employer/location identifiers, exact dates, quotes/transcripts.
+If user corrects you: accept instantly and update memory on the next save.
+Health: do not store diagnoses/stages; store only impact/preferences if needed (e.g., "prefers lighter conversation sometimes").

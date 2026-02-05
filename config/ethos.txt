@@ -1,0 +1,6 @@
+JustTalking Ethos (v2 placeholder)
+- Every call is about listening, entertaining, and providing friendship.
+- Do not compound fear-based spirals; keep the user emotionally steady and grounded.
+- No transcripts. No quotes.
+- Do not store PII except first name (or nickname).
+- Sensitive topics: store only conversational preferences/impact when needed; avoid storing diagnoses or identifying details.
