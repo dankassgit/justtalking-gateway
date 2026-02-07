@@ -1,58 +1,61 @@
 import os
-import json
-import urllib.request
-import urllib.error
+from typing import List, Dict, Any
+
+from openai import OpenAI
 
 
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
-DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "claude-sonnet-4.5")
-ANTHROPIC_VERSION = os.getenv("ANTHROPIC_VERSION", "2023-06-01")
-
-
-def generate_reply(role_text: str, user_text: str, temperature: float = 1.0, max_tokens: int = 120) -> str:
+class XAIProvider:
     """
-    Calls Anthropic via raw HTTPS so we don't need the 'anthropic' Python package.
+    xAI (Grok) via OpenAI-compatible API.
+    Uses env vars:
+      - XAI_API_KEY
+      - XAI_BASE_URL (default https://api.x.ai/v1)
+      - JT_MODEL (default grok-4-1-fast-non-reasoning)
+      - JT_TEMPERATURE, JT_MAX_TOKENS, JT_TOP_P,
+        JT_PRESENCE_PENALTY, JT_FREQUENCY_PENALTY (optional)
     """
-    if not ANTHROPIC_API_KEY:
-        return "[gateway] missing ANTHROPIC_API_KEY"
 
-    payload = {
-        "model": DEFAULT_MODEL,
-        "max_tokens": int(max_tokens),
-        "temperature": float(temperature),
-        "system": role_text or "You are a playful assistant. Keep replies short.",
-        "messages": [{"role": "user", "content": user_text or ""}],
-    }
+    def __init__(self) -> None:
+        api_key = os.getenv("XAI_API_KEY", "").strip()
+        if not api_key:
+            raise RuntimeError("Missing XAI_API_KEY")
 
-    req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={
-            "Content-Type": "application/json",
-            "x-api-key": ANTHROPIC_API_KEY,
-            "anthropic-version": ANTHROPIC_VERSION,
-        },
-        method="POST",
-    )
+        base_url = os.getenv("XAI_BASE_URL", "https://api.x.ai/v1").strip()
 
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            body = resp.read().decode("utf-8")
-            data = json.loads(body)
+        # OpenAI client pointed at xAI
+        self.client = OpenAI(
+            api_key=api_key,
+            base_url=base_url,
+        )
 
-        content = data.get("content") or []
-        if isinstance(content, list) and content and isinstance(content[0], dict):
-            text = (content[0].get("text") or "").strip()
-            return text or "[gateway] empty reply"
+        self.model = os.getenv("JT_MODEL", "grok-4-1-fast-non-reasoning").strip()
 
-        return "[gateway] unexpected response"
+        # Style defaults – you can tweak later
+        self.temperature = float(os.getenv("JT_TEMPERATURE", "1.1"))
+        self.max_tokens = int(os.getenv("JT_MAX_TOKENS", "120"))
+        self.top_p = float(os.getenv("JT_TOP_P", "0.95"))
+        self.presence_penalty = float(os.getenv("JT_PRESENCE_PENALTY", "0.3"))
+        self.frequency_penalty = float(os.getenv("JT_FREQUENCY_PENALTY", "0.15"))
 
-    except urllib.error.HTTPError as e:
-        try:
-            err = e.read().decode("utf-8")
-        except Exception:
-            err = ""
-        return f"[gateway] http {e.code} {err[:200]}".strip()
+    def chat(self, messages: List[Dict[str, str]]) -> Dict[str, Any]:
+        """
+        messages: list of {"role": "system"|"user"|"assistant", "content": "..."}
+        """
+        resp = self.client.chat.completions.create(
+            model=self.model,
+            messages=messages,
+            temperature=self.temperature,
+            max_tokens=self.max_tokens,
+            top_p=self.top_p,
+            presence_penalty=self.presence_penalty,
+            frequency_penalty=self.frequency_penalty,
+        )
 
-    except Exception as e:
-        return f"[gateway] error {type(e).__name__}"
+        choice = resp.choices[0]
+        text = (choice.message.content or "").strip()
+
+        return {
+            "text": text,
+            "model": getattr(resp, "model", self.model),
+            "usage": getattr(resp, "usage", None),
+        }
