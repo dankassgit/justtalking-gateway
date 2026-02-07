@@ -2,21 +2,21 @@ import os
 import time
 from flask import Flask, request, jsonify
 
-app = Flask(__name__)
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROLES_DIR = os.path.join(BASE_DIR, "config", "roles")
+
+app = Flask(__name__)
 
 def now():
     return int(time.time())
 
-def load_role(persona):
-    try:
-        path = os.path.join(ROLES_DIR, f"{persona}.txt")
-        with open(path, "r", encoding="utf-8") as f:
-            return f.read().strip()
-    except Exception:
-        return None
+def load_role(persona: str) -> str:
+    persona = persona.strip().lower()
+    path = os.path.join(ROLES_DIR, f"{persona}.txt")
+    if not os.path.exists(path):
+        return ""
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
 
 @app.get("/health")
 def health():
@@ -31,22 +31,21 @@ def message():
         return jsonify(ok=False, error="unauthorized", ts=now()), 401
 
     data = request.get_json(silent=True) or {}
-    persona = data.get("persona", "flirt")
-    text = data.get("text", "")
+    persona = (data.get("persona") or "flirt").strip().lower()
+    user_text = data.get("text", "")
 
     role_text = load_role(persona)
 
     if not role_text:
         reply = f"[{persona}] heard you."
     else:
-        # TEMP placeholder — proves file is being read
-        reply = role_text.splitlines()[0]
+        reply = role_text.strip()
 
     return jsonify(
         ok=True,
         ts=now(),
         persona=persona,
-        received=text,
+        received=user_text,
         reply=reply
     )
 
