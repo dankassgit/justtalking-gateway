@@ -2,6 +2,8 @@ import os
 import time
 from flask import Flask, request, jsonify
 
+from providers import generate_reply
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROLES_DIR = os.path.join(BASE_DIR, "config", "roles")
 
@@ -11,12 +13,12 @@ def now():
     return int(time.time())
 
 def load_role(persona: str) -> str:
-    persona = persona.strip().lower()
+    persona = (persona or "flirt").strip().lower()
     path = os.path.join(ROLES_DIR, f"{persona}.txt")
     if not os.path.exists(path):
         return ""
     with open(path, "r", encoding="utf-8") as f:
-        return f.read()
+        return f.read().strip()
 
 @app.get("/health")
 def health():
@@ -32,21 +34,25 @@ def message():
 
     data = request.get_json(silent=True) or {}
     persona = (data.get("persona") or "flirt").strip().lower()
-    user_text = data.get("text", "")
+    text = (data.get("text") or "").strip()
 
     role_text = load_role(persona)
-
     if not role_text:
-        reply = f"[{persona}] heard you."
-    else:
-        reply = role_text.strip()
+        role_text = f"You are {persona}. Keep replies very short."
+
+    reply_text = generate_reply(
+        role_text=role_text,
+        user_text=text,
+        temperature=1.0,
+        max_tokens=120
+    )
 
     return jsonify(
         ok=True,
         ts=now(),
         persona=persona,
-        received=user_text,
-        reply=reply
+        received=text,
+        reply=reply_text
     )
 
 if __name__ == "__main__":
