@@ -1,14 +1,22 @@
 import os
 import time
-from pathlib import Path
 from flask import Flask, request, jsonify
-
-from providers import run_model
 
 app = Flask(__name__)
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ROLES_DIR = os.path.join(BASE_DIR, "config", "roles")
+
 def now():
     return int(time.time())
+
+def load_role(persona):
+    try:
+        path = os.path.join(ROLES_DIR, f"{persona}.txt")
+        with open(path, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception:
+        return None
 
 @app.get("/health")
 def health():
@@ -16,39 +24,30 @@ def health():
 
 @app.post("/message")
 def message():
-    # auth
     expected = os.getenv("GATEWAY_SHARED_SECRET", "")
     provided = request.headers.get("X-JustTalking-Secret", "")
 
     if not expected or provided != expected:
         return jsonify(ok=False, error="unauthorized", ts=now()), 401
 
-    # input
     data = request.get_json(silent=True) or {}
-    persona = (data.get("persona") or "unknown").strip()
-    text = (data.get("text") or "").strip()
+    persona = data.get("persona", "flirt")
+    text = data.get("text", "")
 
-    # load role contract (persona file)
-    role_path = Path(f"config/roles/{persona}.txt")
-    if role_path.exists():
-        system_prompt = role_path.read_text(encoding="utf-8").strip()
+    role_text = load_role(persona)
+
+    if not role_text:
+        reply = f"[{persona}] heard you."
     else:
-        system_prompt = f"You are {persona}. Keep replies short."
-
-    # generate reply (high creativity, short)
-    reply_text = run_model(
-        system_prompt=system_prompt,
-        user_text=text,
-        temperature=1.0,
-        max_tokens=120
-    )
+        # TEMP placeholder — proves file is being read
+        reply = role_text.splitlines()[0]
 
     return jsonify(
         ok=True,
         ts=now(),
         persona=persona,
         received=text,
-        reply=reply_text
+        reply=reply
     )
 
 if __name__ == "__main__":
